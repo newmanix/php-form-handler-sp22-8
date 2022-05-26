@@ -1,16 +1,23 @@
 <html>
   <head>
-    <title>PHP Test Page</title>
+    <title>World's Smallest Form Handler</title>
   </head>
   <body>
-    <h1>PHP Test Page</h1>
-    <?php
-    echo '<p>This is PHP!</p>';
-    ?>
-    <p>Hello from GitHub!</p>
-<?php
-    echo '<p>This is a change from repl.it!</p>';
-?>
-<p>This is a change from VSCode!</p>
+    <h1>World's Smallest Form Handler</h1>
+  <?php
+  if(isset($_POST["FirstName"])){//show data
+    echo $_POST["FirstName"];
+  }else{//show form
+    echo '
+        <form method="post" action="">
+        <p>First Name: <input type="text" name="FirstName" /></p>
+        <p><input type="submit" /></p>
+       </form>
+        ';
+  }
+ 
+
+  ?>
+
   </body>
 </html>
